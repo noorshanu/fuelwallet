@@ -1,35 +1,60 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useEffect, useState } from 'react'
+import gsap from "gsap";
+import './index.css'
+import NavBar from './components/Navbar'
+import Hero from './components/Hero'
+import BrowserSupport from './components/Support'
+import GetStarted from './components/GetStarted'
+import Features from './components/Feature'
+import ComingSoon from './components/ComingSoon'
+import Footer from './components/Footer'
 
 function App() {
-  const [count, setCount] = useState(0)
+
+useEffect(() => {
+  const stars = document.querySelectorAll(".star");
+  stars.forEach((star) => {
+    gsap.to(star, {
+      x: "random(-50, 50)",
+      y: "random(-50, 50)",
+      opacity: "random(0.3, 1)",
+      duration: "random(1, 3)",
+      repeat: -1,
+      yoyo: true,
+      ease: "power1.inOut",
+    });
+  });
+}, []);
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className="min-h-screen landing-page text-white">
+      <NavBar />
+      <main>
+        <Hero />
+        <BrowserSupport />
+        <GetStarted />
+        <Features />
+        <ComingSoon />
+      </main>
+      <Footer />
+    </div>
   )
 }
 
 export default App
+
+
+
+//     <div className="landing-page">
+//       <div className="stars-container">
+//         {[...Array(100)].map((_, i) => (
+//           <div key={i} className="star" />
+//         ))}
+//       </div>
+//       <header className="header">
+//         <h1>A Crypto Wallet to Blockchain Apps</h1>
+//         <p>Start exploring blockchain applications in seconds.</p>
+//         <button className="cta-btn">GET 1FUEL</button>
+//       </header>
+//     </div>
+
