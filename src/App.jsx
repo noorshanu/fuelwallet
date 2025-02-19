@@ -11,25 +11,25 @@ import Footer from './components/Footer'
 
 function App() {
 
-useEffect(() => {
-  const stars = document.querySelectorAll(".star");
-  stars.forEach((star) => {
-    gsap.to(star, {
-      x: "random(-50, 50)",
-      y: "random(-50, 50)",
-      opacity: "random(0.3, 1)",
-      duration: "random(1, 3)",
-      repeat: -1,
-      yoyo: true,
-      ease: "power1.inOut",
-    });
-  });
-}, []);
+  // useEffect(() => {
+  //   const stars = document.querySelectorAll(".star");
+  //   stars.forEach((star) => {
+  //     gsap.to(star, {
+  //       x: "random(-50, 50)",
+  //       y: "random(-50, 50)",
+  //       opacity: "random(0.3, 1)",
+  //       duration: "random(1, 3)",
+  //       repeat: -1,
+  //       yoyo: true,
+  //       ease: "power1.inOut",
+  //     });
+  //   });
+  // }, []);
 
   return (
-    <div className="min-h-screen landing-page text-white">
+    <div className="w-full bg-black overflow-x-hidden">
       <NavBar />
-      <main>
+      <main className='relative w-full'>
         <Hero />
         <BrowserSupport />
         <GetStarted />

@@ -2,23 +2,23 @@ import { useEffect } from "react";
 import Button from "./ui/Button";
 
 const Hero = () => {
-    useEffect(() => {
-        const stars = document.querySelectorAll(".star");
-        stars.forEach((star) => {
-            gsap.to(star, {
-                x: "random(-50, 50)",
-                y: "random(-50, 50)",
-                opacity: "random(0.3, 1)",
-                duration: "random(1, 3)",
-                repeat: -1,
-                yoyo: true,
-                ease: "power1.inOut",
-            });
-        });
-    }, []);
+    // useEffect(() => {
+    //     const stars = document.querySelectorAll(".star");
+    //     stars.forEach((star) => {
+    //         gsap.to(star, {
+    //             x: "random(-50, 50)",
+    //             y: "random(-50, 50)",
+    //             opacity: "random(0.3, 1)",
+    //             duration: "random(1, 3)",
+    //             repeat: -1,
+    //             yoyo: true,
+    //             ease: "power1.inOut",
+    //         });
+    //     });
+    // }, []);
 
     return (
-        <section className="min-h-screen bg-gradient-to-b from-black to-purple-900 pt-20">
+        <section className="pt-20">
             <div className="container mx-auto px-6 py-20">
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
                     <div className="text-white space-y-6">
