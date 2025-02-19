@@ -3,56 +3,68 @@ import CircularText from "./ui/CircularText";
 import { IoMdArrowUp } from "react-icons/io";
 import SocialIcons from "./ui/SocialIcons";
 
-
 const Footer = () => (
-    <footer className=" bg-gray-900/50 backdrop-blur-lg shadow-lg">
-        <div className="container mx-auto px-6">
-            <div className="flex flex-col md:flex-row justify-between items-center">
-                <div className="flex items-center mb-8 lg:mb-0">
-                    <img src="/logo-gradient.png" alt="1FUEL Logo" className="" />
-                    <div>
-                        <h2 className="ml-4 text-6xl bg-gradient-to-r from-[#929394] to-[#ffffff] bg-clip-text text-transparent">1FUEL Wallet Available Now!</h2>
-                        <h3 className="text-6xl font-bold ml-4 bg-gradient-to-r from-[#8d8e8f] to-[#d1cece] bg-clip-text text-transparent">Don't Miss Out!</h3>
-                    </div>
-                </div>
-            </div>
+  <footer className="bg-gray-900/50 backdrop-blur-lg shadow-lg pt-10">
+    <div className="container mx-auto px-6">
 
-            <div className="flex flex-col md:flex-row items-center max-w-5xl w-full mx-auto border-b border-gray-400">
-                <p className="text-gray-300 text-lg">The new 1FUEL Wallet extension is here! Don't miss out on secure, seamless digital asset management with cross chain support and cold security. Get it now and take control of your Crypto!</p>
-                {/* <img src="" alt="" /> */}
-                <CircularText />
-            </div>
-
-
-            <section className="max-w-5xl w-full mx-auto text-gray-200 text-sm">
-                <div className="flex justify-between">
-                    <div className="flex items-center gap-4">
-                        <img src="/logo.png" alt="Logo" />
-                        <a href="#" className="hover:text-white">info@1fuel.io</a>
-                        <a href="#" className="hover:text-white">investors@1fuel.io</a>
-                        <a href="#" className="hover:text-white">marketing@1fuel.io</a>
-                    </div>
-                    <div className="flex items-center gap-4">
-                        <a href="#" className="hover:text-white transition-all group">
-                            Whitepaper <span><IoMdArrowUp className="inline-block rotate-45 group-hover:scale-125 transition-transform" /></span>
-                        </a>
-                        <a href="#" className="hover:text-white transition-all group">
-                            Login <span><IoMdArrowUp className="inline-block rotate-45 group-hover:scale-125 transition-transform" /></span>
-                        </a>
-                        <a href="#" className="hover:text-white transition-all group">
-                            Join presale <span><IoMdArrowUp className="inline-block rotate-45 group-hover:scale-125 transition-transform" /></span>
-                        </a>
-                    </div>
-                </div>
-
-                <div className="flex justify-between py-10">
-                    <p className="w-160">Digital currencies may not be regulated in your area.Their value can fluctuate, rising or falling. Any profits you make could be subject to capital gains tax or other taxes that apply in your jurisdiction.</p>
-                    <SocialIcons />
-                </div>
-            </section>
-
+      {/* Main Banner */}
+      <div className="flex flex-col md:flex-row items-center justify-between gap-6 lg:text-left">
+        <div className="flex flex-col md:flex-row items-center space-x-4 mx-auto">
+          <img src="/logo-gradient.png" alt="1FUEL Logo" className="w-23 md:w-70 h-23 md:h-full" />
+          <div>
+            <h2 className="text-4xl md:text-6xl font-semibold bg-gradient-to-r from-[#929394] to-[#ffffff] bg-clip-text text-transparent">
+              1FUEL Wallet Available Now!
+            </h2>
+            <h3 className="text-3xl md:text-6xl font-bold bg-gradient-to-r from-[#8d8e8f] to-[#d1cece] bg-clip-text text-transparent">
+              Don't Miss Out!
+            </h3>
+          </div>
         </div>
-    </footer>
+      </div>
+
+      {/* Description & CircularText */}
+      <div className="flex flex-col md:flex-row items-center justify-between max-w-5xl w-full mx-auto border-b border-gray-400 py-8 gap-6">
+        <p className="text-gray-300 text-base sm:text-lg leading-relaxed  md:text-left">
+          The new 1FUEL Wallet extension is here! Don't miss out on secure, seamless digital asset management with cross-chain support and cold security. Get it now and take control of your Crypto!
+        </p>
+        <CircularText />
+      </div>
+
+      {/* Footer Links */}
+      <section className="max-w-5xl w-full mx-auto text-gray-200 text-sm py-8">
+        <div className="flex flex-col md:flex-row justify-between gap-6">
+
+          {/* Contact Info */}
+          <div className="flex flex-col md:flex-row items-center gap-4  md:text-left">
+            <img src="/logo.png" alt="Logo" className="" />
+            <div className="flex flex-col sm:flex-row gap-2 sm:gap-4">
+              <a href="mailto:info@1fuel.io" className="hover:text-white">info@1fuel.io</a>
+              <a href="mailto:investors@1fuel.io" className="hover:text-white">investors@1fuel.io</a>
+              <a href="mailto:marketing@1fuel.io" className="hover:text-white">marketing@1fuel.io</a>
+            </div>
+          </div>
+
+          {/* Quick Links */}
+          <div className="flex flex-col sm:flex-row items-center gap-3">
+            {["Whitepaper", "Login", "Join presale"].map((item) => (
+              <a href="#" key={item} className="hover:text-white transition-all group">
+                {item}{" "}
+                <IoMdArrowUp className="inline-block rotate-45 group-hover:scale-125 transition-transform" />
+              </a>
+            ))}
+          </div>
+        </div>
+
+        {/* Disclaimer & Social Icons */}
+        <div className="flex flex-col md:flex-row justify-between items-center py-6 md:py-10  md:text-left gap-6">
+          <p className="text-gray-400  max-w-lg">
+            Digital currencies may not be regulated in your area. Their value can fluctuate, rising or falling. Any profits you make could be subject to capital gains tax or other taxes that apply in your jurisdiction.
+          </p>
+          <SocialIcons />
+        </div>
+      </section>
+    </div>
+  </footer>
 );
 
 export default Footer;

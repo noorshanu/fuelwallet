@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import Button from './ui/Button';
+import { IoIosArrowDown } from 'react-icons/io';
 
 const NavBar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,12 +15,26 @@ const NavBar = () => {
 
                 {/* Desktop Menu */}
                 <div className="hidden lg:flex items-center space-x-8">
-                    <a href="#" className="text-gray-300 hover:text-white">Features</a>
-                    <a href="#" className="text-gray-300 hover:text-white">Build</a>
-                    <a href="#" className="text-gray-300 hover:text-white">Resources</a>
-                    <a href="#" className="text-gray-300 hover:text-white">Cryptocurrencies</a>
-                    <a href="#" className="text-gray-300 hover:text-white">Learn</a>
-                    <Button />
+                    <a href="#" className="text-gray-300 hover:text-white transition-all duration-300 ease-in-out group">
+                        Features
+                        <IoIosArrowDown className="inline-block transition-transform duration-300 group-hover:rotate-180" />
+                    </a>
+                    <a href="#" className="text-gray-300 hover:text-white transition-all duration-300 ease-in-out group">
+                        Build
+                        <IoIosArrowDown className="inline-block transition-transform duration-300 group-hover:rotate-180" />
+                    </a>
+                    <a href="#" className="text-gray-300 hover:text-white transition-all duration-300 ease-in-out group">
+                        Resources
+                        <IoIosArrowDown className="inline-block transition-transform duration-300 group-hover:rotate-180" />
+                    </a>
+                    <a href="#" className="text-gray-300 hover:text-white transition-all duration-300 ease-in-out group">
+                        Cryptocurrencies
+                        <IoIosArrowDown className="inline-block transition-transform duration-300 group-hover:rotate-180" />
+                    </a>
+                    <a href="#" className="text-gray-300 hover:text-white transition-all duration-300 ease-in-out">
+                        Learn
+                    </a>
+                    <Button text="Get 1FUEL" showArrow={true} gradientFrom="#E0519B" gradientTo="#B04BEB" />
                 </div>
 
                 {/* Mobile Menu Button */}
@@ -32,7 +47,7 @@ const NavBar = () => {
             </div>
 
             {/* Mobile Menu */}
-            <div 
+            <div
                 className={`
                     lg:hidden 
                     fixed 
