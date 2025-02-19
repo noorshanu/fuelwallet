@@ -1,16 +1,22 @@
 import Button from "./ui/Button";
 
 const Hero = () => {
+
+    const screenShots = [
+        { src: "/extension1 2.png", rotate: "-15deg", position: "-translate-x-45" },
+        { src: "/extension1 1.png", rotate: "0deg", position: "z-10" },
+        { src: "/extension1 3.png", rotate: "15deg", position: "translate-x-32" },
+    ]
     return (
         <section className="relative pt-20">
             {/* Background Image */}
-            <div 
+            <div
                 className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat opacity-80"
                 style={{ backgroundImage: "url('/bg-gradient.png')" }}
             ></div>
 
             <div className="container mx-auto px-6 py-20 relative z-10">
-                <div className="grid lg:grid-cols-2 gap-12 items-center">                    
+                <div className="grid lg:grid-cols-2 gap-12 items-center">
                     {/* Left Content */}
                     <div className="text-white space-y-6">
                         <h1 className="text-4xl lg:text-6xl font-bold leading-tight gradient-text">
@@ -23,17 +29,14 @@ const Hero = () => {
                     </div>
 
                     {/* Right Side Images */}
-                    <div className="relative h-[500px]">
-                        <div className="absolute right-0 top-0 w-full text-white transform group">
-                            {[
-                                '/extension1 1.png',
-                                '/extension1 2.png',
-                            ].map((imgPath, index) => (
+                    <div className="relative md:h-[500px] h-[300px] md:mx-30 ">
+                        <div className="relative w-full h-full">
+                            {screenShots.map((img, index) => (
                                 <img
                                     key={index}
-                                    src={imgPath}
+                                    src={img.src}
                                     alt={`Wallet Screenshot ${index + 1}`}
-                                    className={`absolute top-0 right-30 w-64 rounded-xl shadow-2xl transition-transform duration-300`}
+                                    className={`absolute shadow-2xl transition-transform duration-500 ease-in-out transform ${img.position} rotate-${img.rotate}`}
                                 />
                             ))}
                         </div>
