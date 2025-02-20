@@ -2,13 +2,13 @@ import { motion } from "framer-motion";
 
 const BrowserSupport = () => {
   return (
-    <section className="relative py-8 md:py-20 text-center overflow-hidden">
+    <section className="relative py-8 md:py-20 text-center ">
       <motion.div
         className="relative z-10"
         initial={{ opacity: 0, y: 50 }} // Start lower with fade-out
         whileInView={{ opacity: 1, y: 0 }} // Slide up to normal position
         transition={{ duration: 1, ease: "easeOut" }}
-        viewport={{ once: true }}
+        viewport={{ once: true , amount: 0.3 }}
       >
         <p className="text-gray-300 px-4 popfont">
           The 1FUEL Wallet Browser Extension works on
@@ -27,7 +27,7 @@ const BrowserSupport = () => {
               transition: { staggerChildren: 0.2, ease: "easeOut", duration: 0.8 },
             },
           }}
-          viewport={{ once: true }}
+          viewport={{ once: true , amount: 0.3  }}
         >
           {["/chrome-icon.png", "/brave-icon.png", "/firefox-icon.png", "/edge-icon.png"].map(
             (browser) => (
@@ -50,7 +50,7 @@ const BrowserSupport = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-          viewport={{ once: true }}
+          viewport={{ once: true  , amount: 0.3 }}
         >
           <a
             href="#"
