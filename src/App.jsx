@@ -12,12 +12,13 @@ function App() {
 
  
   return (
-    <div className="w-full bg-black overflow-x-hidden">
-      {/* <StarsBackground /> */}
+    <div className="w-full  overflow-x-hidden">
+      <StarsBackground />
       <NavBar />
       <main className='relative w-full'>
         <Hero />
         <BrowserSupport />
+        <img src="/blur2.png" alt=""  className="absolute top-[15%] left-[10%]  "/>
         <GetStarted />
         <Features />
         <ComingSoon />

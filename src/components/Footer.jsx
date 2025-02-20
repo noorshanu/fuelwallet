@@ -4,7 +4,7 @@ import { IoMdArrowUp } from "react-icons/io";
 import SocialIcons from "./ui/SocialIcons";
 
 const Footer = () => (
-  <footer className="bg-gray-900/50 backdrop-blur-lg shadow-lg pt-10">
+  <footer className="bg-[#12101A] backdrop-blur-lg shadow-lg pt-10">
     <div className="container mx-auto px-6">
 
       {/* Main Banner */}

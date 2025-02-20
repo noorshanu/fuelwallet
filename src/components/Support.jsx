@@ -3,12 +3,12 @@ const BrowserSupport = () => (
     {/* Background Image */}
     <div 
       className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat "
-      style={{ backgroundImage: "url('/bg-gradient.png')" }}
+    
     ></div>
 
     {/* Content Wrapper (Ensures text is above background) */}
     <div className="relative z-10">
-      <p className="text-gray-300 px-4">The 1FUEL Wallet Browser Extension works on</p>
+      <p className="text-gray-300 px-4 popfont">The 1FUEL Wallet Browser Extension works on</p>
       <div className="flex justify-center items-center gap-4 md:gap-8 lg:gap-18 my-8 md:my-18 px-4">
         {['/chrome-icon.png', '/brave-icon.png', '/firefox-icon.png', '/edge-icon.png'].map((browser) => (
           <img

@@ -1,1 +1,8 @@
 @import "tailwindcss";
+
+.star {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    z-index: 1;
+  }

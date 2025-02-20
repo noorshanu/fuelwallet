@@ -1,11 +1,8 @@
 import Button from "./ui/Button";
 
 const GetStarted = () => (
-    <section className="py-16 relative overflow-hidden ">
-        <div
-            className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat top-0 left-50"
-            style={{ backgroundImage: "url('/bg-gradient.png')" }}
-        ></div>
+    <section className="py-16 relative overflow-hidden bg-[#0f0f0f56] ">
+
         <div className="container mx-auto px-6">
             <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
 
@@ -23,7 +20,7 @@ const GetStarted = () => (
 
                 {/* Text & Button Section */}
                 <div className="text-white text-center md:text-right">
-                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold mb-4 text-transparent bg-clip-text bg-gradient-to-b from-gray-400 via-white to-gray-400 relative z-10">
+                    <h2 className="text-4xl md:text-5xl popfont lg:text-6xl font-semibold mb-4 text-transparent bg-clip-text bg-gradient-to-b from-gray-400 via-white to-gray-400 relative z-10">
                         Get Started
                     </h2>
                     <div className="flex justify-end">

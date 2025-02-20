@@ -8,7 +8,7 @@ const StarsBackground = () => {
     for (let i = 0; i < n; i++) {
       let posX = Math.random() * 100 + "%";
       let posY = Math.random() * 100 + "%";
-      let size = Math.random() * 3 + 1; // Ensure minimum size
+      let size = Math.random() * 2 + 1; // Ensure minimum size
 
       let star = document.createElement("div"); // Use "div" instead of "star"
       star.classList.add("star");
@@ -16,7 +16,7 @@ const StarsBackground = () => {
       star.style.width = `${size}px`;
       star.style.top = posY;
       star.style.left = posX;
-      star.style.boxShadow = `0 0 ${size + 2}px 1px rgba(255,255,255,0.2)`;
+      star.style.boxShadow = `0 0 ${size + 1}px 1px rgba(255,255,255,0.2)`;
 
       container.appendChild(star);
     }
