@@ -1,12 +1,8 @@
 const BrowserSupport = () => (
   <section className="relative py-8 md:py-20 text-center">
-    {/* Background Image */}
-    <div 
-      className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat "
-    
-    ></div>
+  
 
-    {/* Content Wrapper (Ensures text is above background) */}
+  
     <div className="relative z-10">
       <p className="text-gray-300 px-4 popfont">The 1FUEL Wallet Browser Extension works on</p>
       <div className="flex justify-center items-center gap-4 md:gap-8 lg:gap-18 my-8 md:my-18 px-4">
