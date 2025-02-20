@@ -36,7 +36,7 @@ const Footer = () => (
 
           {/* Contact Info */}
           <div className="flex flex-col md:flex-row items-center gap-4  md:text-left">
-            <img src="/logo.png" alt="Logo" className="" />
+            <img src="/Logo.png" alt="Logo" className="" />
             <div className="flex flex-col sm:flex-row gap-2 sm:gap-4">
               <a href="mailto:info@1fuel.io" className="hover:text-white">info@1fuel.io</a>
               <a href="mailto:investors@1fuel.io" className="hover:text-white">investors@1fuel.io</a>
