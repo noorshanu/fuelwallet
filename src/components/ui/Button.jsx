@@ -11,6 +11,7 @@ const Button = ({
 }) => {
   return (
     <button
+    
       className={`bg-gradient-to-r text-white px-6 py-2 popfont rounded-sm flex items-center gap-2 transition-all duration-300 ease-in-out group hover:scale-105 hover:shadow-lg ${className}`}
       style={{ backgroundImage: `linear-gradient(to right, ${gradientFrom}, ${gradientTo})` }}
     >

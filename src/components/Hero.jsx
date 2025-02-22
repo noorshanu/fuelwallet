@@ -28,12 +28,17 @@ const Hero = () => {
               Start exploring blockchain applications in seconds. Trusted by
               over 100 million users worldwide.
             </p>
+            <a     href="http://1fuel.io/" target="_blank">
             <Button
               text="Get 1FUEL"
+          
               showArrow={false}
               gradientFrom="#E0519B"
               gradientTo="#B04BEB"
             />
+            </a>
+    
+      
           </motion.div>
 
           {/* Right Side Images (Sliding in from Right) */}
