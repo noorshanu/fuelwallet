@@ -46,12 +46,20 @@ const Footer = () => (
 
           {/* Quick Links */}
           <div className="flex flex-col sm:flex-row items-center gap-3">
-            {["Whitepaper", "Login", "Join presale"].map((item) => (
-              <a href="#" key={item} className="hover:text-white transition-all group">
-                {item}{" "}
+           
+              <a href="https://whitepaper.1fuel.io/" target="_blank" className="hover:text-white transition-all group">
+               Whitepaper
                 <IoMdArrowUp className="inline-block rotate-45 group-hover:scale-125 transition-transform" />
               </a>
-            ))}
+              <a href="https://presale.1fuel.io/login" target="_blank" className="hover:text-white transition-all group">
+            Login
+                <IoMdArrowUp className="inline-block rotate-45 group-hover:scale-125 transition-transform" />
+              </a>
+              <a href="https://presale.1fuel.io/register" target="_blank" className="hover:text-white transition-all group">
+              Join Presale
+                <IoMdArrowUp className="inline-block rotate-45 group-hover:scale-125 transition-transform" />
+              </a>
+          
           </div>
         </div>
 

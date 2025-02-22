@@ -33,8 +33,9 @@ const NavBar = () => {
                     </a>
                     <a href="#" className="text-gray-300 hover:text-white transition-all duration-300 ease-in-out">
                         Learn
-                    </a>
-                    <Button text="Get 1FUEL" showArrow={true} gradientFrom="#E0519B" gradientTo="#B04BEB" />
+                    </a> 
+                   <a href="http://1fuel.io/" target='_blank'>
+                   <Button text="Get 1FUEL" showArrow={true} gradientFrom="#E0519B" gradientTo="#B04BEB" /></a>
                 </div>
 
                 {/* Mobile Menu Button */}
